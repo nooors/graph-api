@@ -7,7 +7,7 @@
     "start": "node build/server.js",
     "build": "tsc -p . && ncp src/schema build",
     "start:dev": "npm run build:dev",
-    "build:dev": "nodemon 'src/server.ts' --exec 'ts-node' src/server.ts -e ts,graphql"
+    "build:dev": "nodemon src/server.ts --exec ts-node src/server.ts -e ts,graphql"
   },
   "keywords": [
     "graphql",
@@ -17,10 +17,10 @@
   "license": "MIT",
   "dependencies": {
     "@graphql-tools/utils": "^8.8.0",
+    "apollo-server-express": "^3.10.0",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
     "express": "^4.18.1",
-    "express-graphql": "^0.12.0",
     "graphql": "^15.8.0",
     "graphql-import-node": "^0.0.5",
     "graphql-playground-middleware-express": "^1.7.23",
